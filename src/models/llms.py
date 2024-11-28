@@ -9,9 +9,9 @@ def load_llm(model_name):
     Returns:
         BaseChatModel: A chat model instance
     """
-    if model_name == "gpt-4o-mini":
+    if model_name == "gpt-3.5-turbo":
         return ChatOpenAI(model_name=model_name, temperature=0.0, max_tokens=1000)
-    elif model_name == "gpt-3.5-turbo":
+    elif model_name == "gpt-4o-mini":
         return ChatOpenAI(model_name=model_name, temperature=0.0, max_tokens=1000)
     else:
         raise ValueError(f"Invalid model name: {model_name}")
